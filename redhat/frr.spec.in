@@ -673,7 +673,7 @@ fi
 
 
 %changelog
-* Sun May 28 2018 Rafael Zalamena <rzalamena@opensourcerouting.org> - %{version}
+* Mon May 28 2018 Rafael Zalamena <rzalamena@opensourcerouting.org> - %{version}
 - Add BFDd support
 
 * Sun May 20 2018 Martin Winter <mwinter@opensourcerouting.org>
