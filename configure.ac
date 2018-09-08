@@ -1353,7 +1353,7 @@ FRR_INCLUDES
 ])dnl
 
 dnl disable doc check
-AC_CHECK_PROGS([SPHINXBUILD], [sphinx-build sphinx-build3 sphinx-build2], [no])
+AC_CHECK_PROGS([SPHINXBUILD], [sphinx-build sphinx-build3 sphinx-build-3 sphinx-build2], [no])
 AM_CONDITIONAL(DOC, test "${enable_doc}" != "no")
 AM_CONDITIONAL(DOC_HTML, test "${enable_doc_html}" = "yes")
 

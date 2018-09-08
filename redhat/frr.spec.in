@@ -47,7 +47,11 @@
 %if 0%{?rhel} && 0%{?rhel} < 7
     %define sphinx sphinx-build2.7
 %else
+%if 0%{?fedora}
+    %define sphinx sphinx-build-3
+%else
     %define sphinx sphinx-build
+%endif
 %endif
 ############################################################################
 
@@ -167,8 +171,13 @@ BuildRequires:  texinfo
 BuildRequires:  python27-devel
 BuildRequires:  python27-sphinx
 %else
+%if 0%{?fedora}
+BuildRequires:  python3-devel
+BuildRequires:  python3-sphinx
+%else
 BuildRequires:  python-devel >= 2.7
 BuildRequires:  python-sphinx
+%endif
 %endif
 %if %{with_pam}
 BuildRequires:  pam-devel
